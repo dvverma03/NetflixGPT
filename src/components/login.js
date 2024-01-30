@@ -1,22 +1,25 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
 import { FormValidation } from "../utils/validate";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUsers } from "../utils/userslice";
 const Login = () => {
+  const dispatch= useDispatch();
   const email = useRef(null);
   const navigate = useNavigate();
   const password = useRef(null);
+  const name = useRef();
   const [errMessage, setErrMessage] = useState(null);
   const handleButton = () => {
+
     const message = FormValidation(email.current.value, password.current.value);
     setErrMessage(message);
     if (message) return;
     if (!isSignForm) {
-      //  sign up
-
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
@@ -24,8 +27,19 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
-          navigate("/");
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/116081426?v=4",
+          })
+            .then(() => {
+              const {uid, email, displayName, photoURL}= auth;
+          dispatch(addUsers({uid:uid, email:email, displayName:displayName, photoURL:photoURL}));
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              setErrMessage(errorCode + "-" + errorMessage);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -41,8 +55,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
-          // ...
+
           navigate("/browse");
         })
         .catch((error) => {
@@ -62,7 +75,7 @@ const Login = () => {
       <Header />
       <div>
         <img
-          className="absolute"
+          className="absolute opacity-85"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt=""
           srcset=""
@@ -76,8 +89,10 @@ const Login = () => {
         <h1 className="font-900 text-4xl py-4">
           {isSignForm ? "Sign in" : "Sign up"}
         </h1>
+
         {!isSignForm && (
           <input
+            ref={name}
             type="text"
             placeholder="Name"
             className="p-3 my-4 w-full bg-gray-800 rounded-lg"
@@ -85,13 +100,13 @@ const Login = () => {
         )}
         <input
           ref={email}
-          type="text"
+          type="email"
           placeholder="Email Address"
           className="p-3 my-4 w-full bg-gray-800 rounded-lg"
         />
         <input
           ref={password}
-          type="text"
+          type="password"
           placeholder="Password"
           className="p-3 my-4 w-full bg-gray-800 rounded-lg"
         />
