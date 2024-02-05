@@ -26,31 +26,29 @@
     -NetflixGpt
       -searchBar
       -movie suggetion
-<h4>Search bar</h4>
-<img src="https://github.com/dvverma03/TheFOODIES/assets/116081426/a4d6af61-b810-4f57-8d95-bf96fcc33161">
       
 <h4>Sign In</h4>
-<img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12"/>
+<img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12">
 
       <h4>Sign UP</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/e3476e11-817c-455f-b176-16fd9e973513"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/e3476e11-817c-455f-b176-16fd9e973513">
 
       <h4>Validation</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/7addd418-e41b-4d3e-abd4-78628665ca9f"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/7addd418-e41b-4d3e-abd4-78628665ca9f">
 
       <h4>Authentication</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/5e5590e4-c0e8-4ec2-9f6e-e90ec7cc7f18"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/5e5590e4-c0e8-4ec2-9f6e-e90ec7cc7f18">
 
       <h4>Landing Page</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/822892af-7754-45c8-b94c-9cf61457c2b0"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/822892af-7754-45c8-b94c-9cf61457c2b0">
 
       <h4>Movie Recomendation</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/ccee265b-ea50-4a33-94d6-b1f0310c6457"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/ccee265b-ea50-4a33-94d6-b1f0310c6457">
 
       <h4>Chat gpt search</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/cedd309e-6a7c-4d92-906e-ce2c48cc3e0b"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/cedd309e-6a7c-4d92-906e-ce2c48cc3e0b">
 
       <h4>Gpt search functionality</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/c09d51ed-c143-4e33-8ef9-d53f6c03cd64"/>
+      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/c09d51ed-c143-4e33-8ef9-d53f6c03cd64">
 
       
