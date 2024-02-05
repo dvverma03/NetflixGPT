@@ -26,9 +26,11 @@
     -NetflixGpt
       -searchBar
       -movie suggetion
+<h4>Search bar</h4>
+<img src="https://github.com/dvverma03/TheFOODIES/assets/116081426/a4d6af61-b810-4f57-8d95-bf96fcc33161">
       
-      <h4>Sign In</h4>
-      <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12"/>
+<h4>Sign In</h4>
+<img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12"/>
 
       <h4>Sign UP</h4>
       <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/e3476e11-817c-455f-b176-16fd9e973513"/>
