@@ -26,6 +26,9 @@
     -NetflixGpt
       -searchBar
       -movie suggetion
+
+      <h4>Search bar</h4>
+<img src="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12">
       
 <h4>Sign In</h4>
 <img scr="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12">
