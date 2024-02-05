@@ -3,11 +3,8 @@ import Login from './login'
 import Browse from './Browse'
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
-import { useEffect } from 'react'
-import { onAuthStateChanged } from "firebase/auth";
-import {auth} from "../utils/firebase"
 import { useDispatch } from 'react-redux'
-import { addUsers, removeUser } from '../utils/userslice'
+// import VideoScreen from "./VideoScreen"
 
 const Body = () => {
     const dispatch= useDispatch();
@@ -19,7 +16,12 @@ const Body = () => {
         {
             path:"/browse",
             element:<Browse/>
-        }
+        },
+        // {
+        //   path:"videoplay",
+        //   element:<VideoScreen/>
+        // }
+        
     ])
 
   return (

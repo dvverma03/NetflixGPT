@@ -7,6 +7,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUsers } from "../utils/userslice";
+import { LogoURL } from "../utils/constant";
+import Footer from "./Footer/footer";
+
 const Login = () => {
   const dispatch= useDispatch();
   const email = useRef(null);
@@ -29,10 +32,10 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/116081426?v=4",
+            photoURL: LogoURL,
           })
             .then(() => {
-              const {uid, email, displayName, photoURL}= auth;
+              const {uid, email, displayName, photoURL}= auth.currentUser;
           dispatch(addUsers({uid:uid, email:email, displayName:displayName, photoURL:photoURL}));
             })
             .catch((error) => {
@@ -124,6 +127,10 @@ const Login = () => {
             : "Already resiter User? Sign in now"}
         </p>
       </form>
+      <div className="z-15 relative top-[110vh]">
+
+      <Footer/>
+      </div>
     </div>
   );
 };
