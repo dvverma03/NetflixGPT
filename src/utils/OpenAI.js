@@ -6,6 +6,7 @@ export const openai = new OpenAI({
 });
 =======
   apiKey: process.env.REACT_APP_OPENAI_KEY,
+  // apiKey: "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",
   dangerouslyAllowBrowser: true,
 })
 >>>>>>> 95b62d9 (sbcdef)
