@@ -10,7 +10,7 @@ const SecondoryConatiner = () => {
   const movies= useSelector((store)=> store.movies)
 
   return (
-    <div className=' absolute top-5 mt-[45%] bg-gradient-to-r from-black bg-opacity-50 box-border'>
+    <div className=' absolute top-5 mt-[75%] md:mt-[45%] bg-gradient-to-r from-black bg-opacity-50 box-border'>
       
       <div className='bg-black'>
 

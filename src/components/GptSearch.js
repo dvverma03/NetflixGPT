@@ -38,7 +38,7 @@ const GptSearch = () => {
 
   return (
     <>
-    <div className="box-border">
+    <div>
       <Header />
       <div className="">
         <img
@@ -54,15 +54,15 @@ const GptSearch = () => {
           onSubmit={(e) => e.preventDefault()}
           className="flex justify-center"
         >
-          <div className="z-40 mt-44 absolute justify-center w-[50%] bg-black p-2">
+          <div className="z-40 mt-44 absolute justify-center md:flex w-screen-[10px] md:w-[50%] md:bg-black p-2">
             <input
               ref={searchText}
-              className="w-[80%] p-4 mx-2"
+              className="w-[90%] p-4 mx-2 my-2 align-center "
               type="text"
               placeholder="Write which you want to see"
             ></input>
             <button
-              className="bg-red-500 p-4 w-[16%] rounded-lg"
+              className="bg-red-500 p-4 mx-2 my-2 w-[90%] md:w-[16%] rounded-lg"
               onClick={EventHandler}
             >
               Search

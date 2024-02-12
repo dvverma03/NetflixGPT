@@ -78,7 +78,7 @@ const Login = () => {
       <Header />
       <div>
         <img
-          className="absolute opacity-85"
+          className="absolute opacity-85 h-[110vh] md:h-[100vh] w-[100vw]"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt=""
           srcset=""
@@ -87,7 +87,7 @@ const Login = () => {
       <form
         onSubmit={(e) => e.preventDefault()}
         action="/browse"
-        className="absolute p-12 bg-black w-3/12 my-36 mx-auto text-white right-0 left-0 rounded-lg bg-opacity-80"
+        className="absolute p-12 bg-black w-[90%] md:w-3/12 my-36 mx-auto text-white right-0 left-0 rounded-lg bg-opacity-80"
       >
         <h1 className="font-900 text-4xl py-4">
           {isSignForm ? "Sign in" : "Sign up"}
@@ -127,7 +127,7 @@ const Login = () => {
             : "Already resiter User? Sign in now"}
         </p>
       </form>
-      <div className="z-15 relative top-[110vh]">
+      <div className="z-15 relative top-[110vh] md:top-[100vh]">
 
       <Footer/>
       </div>
