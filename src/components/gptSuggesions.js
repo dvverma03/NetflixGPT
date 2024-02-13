@@ -7,7 +7,7 @@ const GptSuggesions = () => {
   if (!movieResults || !movieNames) return null;
 
   return (
-    <div className=' bg-black bg-opacity-70 w-screen mt-6 box-border'>
+    <div className=' bg-black bg-opacity-70 w-screen mt-[250px] md:mt-6 box-border'>
       {movieResults.map((movies, index) => (
         <div key={index} className='flex '>
              <div className='flex overflow-x-auto w-screen scrollbar-hide' >
