@@ -12,7 +12,3 @@ export const API_OPTIONS = {
 
  export const Imag_URL= "https://image.tmdb.org/t/p/w185"
 
-<<<<<<< HEAD
- export const OpenAiKey="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";
-=======
->>>>>>> 95b62d9 (sbcdef)
