@@ -4,7 +4,7 @@ import Browse from './Browse'
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-// import VideoScreen from "./VideoScreen"
+import VideoScreen from "./VideoScreen"
 
 const Body = () => {
     const dispatch= useDispatch();
