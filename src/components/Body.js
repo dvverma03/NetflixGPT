@@ -17,10 +17,10 @@ const Body = () => {
             path:"/browse",
             element:<Browse/>
         },
-        // {
-        //   path:"videoplay",
-        //   element:<VideoScreen/>
-        // }
+        {
+          path:"videoplay",
+          element:<VideoScreen/>
+        }
         
     ])
 
