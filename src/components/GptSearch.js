@@ -8,14 +8,18 @@ import GptSuggesions from "./gptSuggesions";
 
 const GptSearch = () => {
   const searchText = useRef(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const fetchMoviesFromTMDB = async (movie)=>{
-    const data= await fetch("https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1", API_OPTIONS);
+  const fetchMoviesFromTMDB = async (movie) => {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/search/movie?query=" +
+        movie +
+        "&include_adult=false&language=en-US&page=1",
+      API_OPTIONS
+    );
     const json = await data.json();
     return json;
-
-  }
+  };
 
   async function EventHandler() {
     const gptQuery =
@@ -29,20 +33,27 @@ const GptSearch = () => {
     });
     const moviesArray = chatCompletion.choices[0].message.content.split(",");
 
-    const promiseArray = moviesArray.map((movies)=> fetchMoviesFromTMDB(movies))
+    const promiseArray = moviesArray.map((movies) =>
+      fetchMoviesFromTMDB(movies)
+    );
 
-    const moviesDetails= await Promise.all(promiseArray);
+    const moviesDetails = await Promise.all(promiseArray);
+    
 
-    dispatch(addGptMovieResult({movieResults : moviesDetails, movieNames:moviesArray}))
+    dispatch(
+      addGptMovieResult({
+        movieResults: moviesDetails,
+        movieNames: moviesArray,
+      })
+    );
   }
 
   return (
-    <>
     <div>
       <Header />
       <div className="">
         <img
-          className="absolute opacity-85 h-screen object-cover w-screen"
+          className="fixed inset-0 w-screen h-screen opacity-85 object-cover bg-fixed"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt=""
           srcSet=""
@@ -70,13 +81,12 @@ const GptSearch = () => {
           </div>
         </form>
       </div>
+      <div className="absolute mt-[20%] w-screen h-[50%]">
+        <GptSuggesions />
+      </div>
     </div>
-    <div className="absolute mt-[20%] w-screen h-[50%]">
-
-      <GptSuggesions/>
-    </div>
-      </>
   );
 };
 
 export default GptSearch;
+
