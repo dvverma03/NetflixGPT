@@ -1,15 +1,15 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import VideoBackground from './VideoBackground';
+import { useSelector } from 'react-redux';
 
 const VideoScreen = () => {
-    const param = useParams();
-  const { key } = param;
+    const key = useSelector((store)=> store)
   return (
     <div>
-       <VideoBackground movieId={key}/>
+       <VideoBackground movieId={key.id}/>
     </div>
   )
 }
 
 export default VideoScreen
+
