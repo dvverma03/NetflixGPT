@@ -14,7 +14,7 @@ const GptSuggestions = () => {
           <div key={index} className='flex'>
             <div className='flex overflow-x-auto w-screen scrollbar-hide'>
               {movies.results.map((movie) => (
-                <Postercards img={movie?.poster_path} key={movie?.id} />
+               <Postercards {...movie} />
               ))}
             </div>
           </div>
