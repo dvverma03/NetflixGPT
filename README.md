@@ -27,7 +27,7 @@
       -searchBar
       -movie suggetion
 <h4>Deploy Link</h4>
-<div>https://netfilxgpt2630.netlify.app/browse</div>
+<div>https://netflix2610.netlify.app</div>
 
 <h4>Sign In</h4>
 <img src="https://github.com/dvverma03/NetflixGPT/assets/116081426/6913d44e-52d5-49fc-8bbc-731b54db4b12">
