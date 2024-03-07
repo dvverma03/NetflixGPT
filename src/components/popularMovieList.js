@@ -9,7 +9,7 @@ const PopularMovieList = ({ title, moviesList }) => {
         <div className='flex'>
 
         {moviesList?.popularPlaying?.map((e) => (
-            <Postercards {...e} />
+            <Postercards {...e} key={e?.id} />
         
         ))}
         </div>
