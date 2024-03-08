@@ -30,7 +30,7 @@ const useMovieTrailer = (movieId) => {
     if (movieId) {
        getMovieVideos();
     }
-  }, [movieId]);
+  }, [movieId, trailerVideo]);
 
   return trailerVideo;
 };
