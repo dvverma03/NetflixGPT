@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { openai } from "../utils/OpenAI";
 import { API_OPTIONS } from "../utils/constant";
@@ -9,6 +9,7 @@ import GptSuggesions from "./gptSuggesions";
 const GptSearch = () => {
   const searchText = useRef(null);
   const dispatch = useDispatch();
+  const [clicked, setClicked]= useState(false)
 
   const fetchMoviesFromTMDB = async (movie) => {
     const data = await fetch(
@@ -22,6 +23,7 @@ const GptSearch = () => {
   };
 
   async function EventHandler() {
+    setClicked(true);
     const gptQuery =
       "Act as a movie recommendation system and suggest some movies for the query " +
       searchText.current.value +
@@ -82,7 +84,7 @@ const GptSearch = () => {
         </form>
       </div>
       <div className="absolute mt-[20%] w-screen h-[50%]">
-        <GptSuggesions />
+        <GptSuggesions  toggle={clicked}/>
       </div>
     </div>
   );
